@@ -1,0 +1,30 @@
+Why dummy?
+The original server uses Nginx, Node.js, Redis, MySQL and Elasticsearch. While it is possible to set up the environment
+so that it all works, it takes way too much time. Instead you can use "dummy" server which will mimic the behaviour of the
+main server and not actually use any databases, caches, not perform search and other things, but will provide you the API
+which you will be able to use for testing the app.
+
+How to run them?
+1. Install node. Ask Chat GPT how to install node on your platform, it shouldn't be hard
+2. Check that node is installed, in the terminal type node --version
+3. Pull this repo and navigate to it's main folder
+4. To run both servers open 2 terminals, in one run "node main_server" in another "node carleton_server"
+
+There are 2 dummy servers.
+
+1. Carleton Server. It mimics the OAuth of carleton end, you can look through the code, the key thing is that you have 10 students,
+student1, student2 ... student10 (these are logins) and 10 staff (analogically as students). They all don't have password validation
+so to log in as student1 you just need to enter student1 in the login field and put whatever in the password field.
+
+
+2. Main server. It mimics the main API you will work with. It doesn't provide dynamic responses, but the format of responses is
+the same as in the actual server and you should use the same guidelines as for the actual API
+For instance if you want to log the user in, you should redirect user to /toOauth and then wait until the user gets redirected to some
+page that starts with /user, it will mean that the user logged in. This is exact same process as for the actual server
+
+What it supports?
+I will try to maintain it so that it supports everything the actual server supports (using chat gpt mostly)
+GET /json/universities.json
+GET /toOauth
+*** This is enough to implement logging in. Note that it doesn't really set cookies, the only cookie it sets is logged=true,
+i will use it later in the dummy to test if the user is actually logged to mimic how the actual server works ***

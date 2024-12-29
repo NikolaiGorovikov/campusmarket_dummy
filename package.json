@@ -1,0 +1,19 @@
+{
+  "name": "campusmarket_dummy",
+  "version": "1.0.0",
+  "description": "Why dummy? The original server uses Nginx, Node.js, Redis, MySQL and Elasticsearch. While it is possible to set up the environment so that it all works, it takes way too much time. Instead you can use \"dummy\" server which will mimic the behaviour of the main server and not actually use any databases, caches, not perform search and other things, but will provide you the API which you will be able to use for testing the app.",
+  "main": "carleton_server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cookie-parser": "^1.4.7",
+    "express": "^4.21.2"
+  },
+  "devDependencies": {
+    "axios": "^1.7.9"
+  }
+}
