@@ -8,7 +8,12 @@ How to run them?
 1. Install node. Ask Chat GPT how to install node on your platform, it shouldn't be hard
 2. Check that node is installed, in the terminal type node --version
 3. Pull this repo and navigate to it's main folder
-4. To run both servers open 2 terminals, in one run "node main_server" in another "node carleton_server"
+4. Run "npm install", only after pulling new version of the dummy, not every time you run it
+5. To run both servers open 2 terminals, in one run "node main_server" in another "node carleton_server"
+6. The server is running on http://localhost:3000, which means that if you want to make a /toOauth request, for instance
+you should make a request to http://localhost:3000/toOauth
+
+NOTE, later when you would want to test only main workflow without the login, don't run carleton server
 
 There are 2 dummy servers.
 
